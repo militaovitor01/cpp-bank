@@ -2,6 +2,7 @@
 #include <string>
 #include "include/Account.hpp"
 #include "include/Holder.hpp"
+#include "include/Employee.hpp"
 
 using namespace std;
 
@@ -16,5 +17,6 @@ int main()
     << "Holder name: " << holder.getName() << endl 
     << "Holder balace: " << newAccount.getBalance() << endl;
 
+    Employee newEmployee("Vitor", CPF("Vitor", "102.823.216-08", "24/04/05"), 20.000);
     return 0;
 }
