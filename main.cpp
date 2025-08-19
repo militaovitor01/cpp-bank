@@ -17,6 +17,6 @@ int main()
     << "Holder name: " << holder.getName() << endl 
     << "Holder balace: " << newAccount.getBalance() << endl;
 
-    Employee newEmployee("Vitor", CPF("Vitor", "102.823.216-08", "24/04/05"), 20.000);
+    Employee newEmployee(CPF("Vitor", "102.823.216-08", "24/04/05"), 20.000);
     return 0;
 }

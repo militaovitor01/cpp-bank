@@ -2,22 +2,19 @@
 
 #include <string>
 #include "CPF.hpp"
+#include "Person.hpp"
 
-class Employee {
+class Employee : public Person{
     private:
-        std::string name;
-        CPF cpf;
         float salary;
 
     public:
         // Constructor
-        Employee(std::string name, CPF cpf, float salary);
+        Employee(CPF cpf, float salary);
 
         // Getters
-        std::string getName();
         float getSalary();
         
-        // Setters
-        void setName(std::string name);
+        // Setters;
         void setSalary(float salary);
 };

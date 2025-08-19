@@ -19,4 +19,8 @@ class Person {
         // Setters
         void setName(std::string name);
         void setSalary(float salary);
+
+        // Regular Methods
+    private:
+        void checkNameSize(std::string name);
 };

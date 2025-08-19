@@ -1,11 +1,13 @@
 #include "../include/Holder.hpp"
+#include "../include/Person.hpp"
+#include "../include/CPF.hpp"
 #include <iostream>
 
 // Constructor
 Holder::Holder(std::string name, CPF cpf)
-    : name(name), cpf(cpf) 
+    : Person(name, cpf) 
 {
-    checkNameSize(name);
+    
 }
 
 // Destructor
@@ -15,19 +17,12 @@ Holder::~Holder()
 
 // Getters
 std::string Holder::getName(){
-    return name;
+    return Person::getName();  // Chamando o método da classe base
 }
 
 // Setters
 void Holder::setName(std::string name){
-    this->name = name;
+    Person::setName(name);  // Chamando o método da classe base
 }
 
-// Regular Methods
-void Holder::checkNameSize(std:: string name) 
-{
-    if(name.size() < 5){
-        std::cout << "Your name must contain at least 5 carachteres!";
-        exit(1);
-    }
-}
+
