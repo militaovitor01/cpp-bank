@@ -9,7 +9,7 @@ Employee::Employee(std::string name, CPF cpf, float salary)
 }
 
 // Getters
-float Employee::getSalary(){
+float Employee::getSalary() const {
     return salary;
 }
 

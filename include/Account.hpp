@@ -30,6 +30,8 @@ class Account {
         void setBalance(float balance); 
 
         // Methods
+        virtual float withdrawTax() const = 0; // Não possui implementacao padrao;
         void withdrawAmount(float withdrawNumber);
         void depositAmount(float depositNumber);
+        void transferBalanceToAnotherAccount(Account& account, float value);
 };

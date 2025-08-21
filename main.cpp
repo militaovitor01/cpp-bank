@@ -5,19 +5,21 @@
 #include "include/Employee.hpp"
 #include "include/CPF.hpp"
 #include "include/Person.hpp"
+#include "include/CurrentAccount.hpp"
+#include "include/SavingsAccount.hpp"
 
 using namespace std;
 
 int main()
 {   
     Holder holder("Vitor", CPF("Vitor", "102.823.216-08", "24-04-2005"));
-    Account newAccount("1234", holder);
-    newAccount.setBalance(1.500);
+    CurrentAccount currentAccount("1234", holder);
+    currentAccount.setBalance(1.500);
 
     cout << "Client data: " << endl 
-    << "Account number: " << newAccount.getNumber() << endl
+    << "Account number: " << currentAccount.getNumber() << endl
     << "Holder name: " << holder.getName() << endl 
-    << "Holder balace: " << newAccount.getBalance() << endl;
+    << "Holder balace: " << currentAccount.getBalance() << endl;
 
     cout << "----------------------" << endl;
 

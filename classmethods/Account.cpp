@@ -41,8 +41,7 @@ void Account::withdrawAmount(float withdrawNumber)
         return;
     }
 
-    float whithdrawTax = withdrawNumber * 0.05;
-    float totalWithdraw = withdrawNumber + whithdrawTax;
+    float totalWithdraw = withdrawNumber + withdrawTax();
 
     if ((totalWithdraw) > balance)
     {
@@ -62,4 +61,10 @@ void Account::depositAmount(float depositNumber)
     }
 
     balance += depositNumber;
+}
+
+void Account::transferBalanceToAnotherAccount(Account& accountDestination, float value)
+{
+    withdrawAmount(100);
+    accountDestination.depositAmount(100);
 }

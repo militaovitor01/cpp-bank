@@ -13,8 +13,11 @@ class Employee : public Person{
         Employee(std::string name, CPF cpf, float salary);
 
         // Getters
-        float getSalary();
+        float getSalary() const;
         
         // Setters;
         void setSalary(float salary);
+
+        // Regular Methods
+        virtual float bonus() const = 0;
 };
