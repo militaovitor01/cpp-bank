@@ -3,6 +3,8 @@
 #include "include/Account.hpp"
 #include "include/Holder.hpp"
 #include "include/Employee.hpp"
+#include "include/CPF.hpp"
+#include "include/Person.hpp"
 
 using namespace std;
 
@@ -17,6 +19,11 @@ int main()
     << "Holder name: " << holder.getName() << endl 
     << "Holder balace: " << newAccount.getBalance() << endl;
 
-    Employee newEmployee(CPF("Vitor", "102.823.216-08", "24/04/05"), 20.000);
+    cout << "----------------------" << endl;
+
+    Employee newEmployee("Vitor", CPF("Vitor","102.823.216-08", "24/04/05"), 20000);
+    cout << "Employee data: " << endl
+    << "Employee name: " << newEmployee.getName() << endl 
+    << "Employee Salary: " << newEmployee.getSalary() << endl;
     return 0;
 }

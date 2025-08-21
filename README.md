@@ -53,7 +53,7 @@ Contains Brazilian taxpayer identification information:
 The project uses a standard C++ compiler (g++). To compile the project:
 
 ```bash
-g++ -Wall -Wextra -g3 main.cpp classmethods/*.cpp -I include/ -o output/banking_system
+g++ main.cpp classmethods/*.cpp -Iinclude -o output/main.exe && output\main.exe
 ```
 
 ## Usage Example

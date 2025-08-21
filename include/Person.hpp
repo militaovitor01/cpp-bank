@@ -4,7 +4,7 @@
 #include "CPF.hpp"
 
 class Person {
-    private:
+    protected:
         std::string name;
         CPF cpf;
 

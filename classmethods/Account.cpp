@@ -41,13 +41,16 @@ void Account::withdrawAmount(float withdrawNumber)
         return;
     }
 
-    if (withdrawNumber > balance)
+    float whithdrawTax = withdrawNumber * 0.05;
+    float totalWithdraw = withdrawNumber + whithdrawTax;
+
+    if ((totalWithdraw) > balance)
     {
         std::cout << "Process failed! You're trying to withdraw a value bigger than your account balance!" << std::endl;
         return;
     }
 
-    balance -= withdrawNumber;
+    balance -= (totalWithdraw);
 }
 
 void Account::depositAmount(float depositNumber)

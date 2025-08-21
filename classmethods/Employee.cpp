@@ -2,8 +2,8 @@
 #include <iostream>
 #include <string>
 
-Employee::Employee(CPF cpf, float salary)
-    : Person(cpf, salary)
+Employee::Employee(std::string name, CPF cpf, float salary)
+    : Person(name, cpf), salary(salary)
 {
 
 }

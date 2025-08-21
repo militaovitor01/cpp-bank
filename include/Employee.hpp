@@ -10,7 +10,7 @@ class Employee : public Person{
 
     public:
         // Constructor
-        Employee(CPF cpf, float salary);
+        Employee(std::string name, CPF cpf, float salary);
 
         // Getters
         float getSalary();
