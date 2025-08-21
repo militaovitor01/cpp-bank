@@ -26,6 +26,16 @@ Extends the Person class to represent a bank employee:
 - Has salary information
 - Inherits name and CPF from Person
 
+### BankTeller
+Extends the Employee class to represent a bank teller:
+- Implements bonus calculation
+- Inherits salary, name, and CPF from Employee
+
+### BankManager
+Extends the Employee class to represent a bank manager:
+- Implements bonus calculation
+- Inherits salary, name, and CPF from Employee
+
 ### Account
 Represents a bank account with:
 - Account number
@@ -33,6 +43,18 @@ Represents a bank account with:
 - Balance
 - Methods for deposit and withdrawal operations
 - Static counter for number of accounts
+- Virtual method for withdrawal tax calculation
+- Methods for transferring balances between accounts
+
+### CurrentAccount
+Extends the Account class to represent a checking account:
+- Implements specific withdrawal tax policy
+- Inherits all account operations from Account class
+
+### SavingsAccount
+Extends the Account class to represent a savings account:
+- Implements specific withdrawal tax policy
+- Inherits all account operations from Account class
 
 ### CPF
 Contains Brazilian taxpayer identification information:
@@ -81,17 +103,25 @@ std::cout << "Current balance: " << account.getBalance() << std::endl;
 .
 ├── main.cpp                  # Main entry point
 ├── classmethods/             # Class implementations
-│   ├── Account.cpp
-│   ├── CPF.cpp
-│   ├── Employee.cpp
-│   ├── Holder.cpp
-│   └── Person.cpp
+│   ├── Account.cpp           # Base account functionality
+│   ├── BankManager.cpp       # Bank manager employee implementation
+│   ├── BankTeller.cpp        # Bank teller employee implementation
+│   ├── CPF.cpp               # Brazilian taxpayer ID implementation
+│   ├── CurrentAccount.cpp    # Current account implementation
+│   ├── Employee.cpp          # Base employee functionality
+│   ├── Holder.cpp            # Account holder implementation
+│   ├── Person.cpp            # Base person class implementation
+│   └── SavingsAccount.cpp    # Savings account implementation
 ├── include/                  # Header files
-│   ├── Account.hpp
-│   ├── CPF.hpp
-│   ├── Employee.hpp
-│   ├── Holder.hpp
-│   └── Person.hpp
+│   ├── Account.hpp           # Base account with deposit/withdrawal methods
+│   ├── bankManager.hpp       # Bank manager with bonus calculation
+│   ├── bankTeller.hpp        # Bank teller with bonus calculation
+│   ├── CPF.hpp               # CPF validation and storage
+│   ├── CurrentAccount.hpp    # Current account with specific withdrawal tax
+│   ├── Employee.hpp          # Employee with salary information
+│   ├── Holder.hpp            # Account holder information
+│   ├── Person.hpp            # Base person with name and CPF
+│   └── SavingsAccount.hpp    # Savings account with specific withdrawal tax
 └── output/                   # Compiled binaries
     └── main.exe
 ```
@@ -107,11 +137,8 @@ std::cout << "Current balance: " << account.getBalance() << std::endl;
 
 Potential enhancements for the project:
 - Add transaction history for accounts
-- Implement different account types (checking, savings)
+- Add interest calculation for savings accounts
+- Implement account fees and maintenance charges
 - Add authentication and security features
 - Create a database connection for persistent storage
 - Implement a user interface (CLI or GUI)
-
-## License
-
-[Specify your license here]

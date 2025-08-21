@@ -7,6 +7,8 @@
 #include "include/Person.hpp"
 #include "include/CurrentAccount.hpp"
 #include "include/SavingsAccount.hpp"
+#include "include/BankManager.hpp"
+#include "include/BankTeller.hpp"
 
 using namespace std;
 
@@ -23,7 +25,7 @@ int main()
 
     cout << "----------------------" << endl;
 
-    Employee newEmployee("Vitor", CPF("Vitor","102.823.216-08", "24/04/05"), 20000);
+    BankManager newEmployee("Vitor", CPF("Vitor","102.823.216-08", "24/04/05"), 20000);
     cout << "Employee data: " << endl
     << "Employee name: " << newEmployee.getName() << endl 
     << "Employee Salary: " << newEmployee.getSalary() << endl;
