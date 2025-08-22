@@ -1,8 +1,8 @@
 #include "../include/BankManager.hpp"
 #include <string>
 
-BankManager::BankManager(std::string name, CPF cpf, float salary)
-    : Employee(name, cpf, salary)
+BankManager::BankManager(std::string name, CPF cpf, float salary, std::string password)
+    : Employee(name, cpf, salary), Authenticable(password)
 {
 
 }

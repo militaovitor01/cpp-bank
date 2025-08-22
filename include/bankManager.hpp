@@ -1,11 +1,11 @@
 #include "Employee.hpp"
-
-class BankManager final : public Employee {
+#include "Authenticable.hpp"
+class BankManager final : public Employee, Authenticable {
     private:
         /* data */
     public:
         // Constructor
-        BankManager(std::string name, CPF cpf, float salary);
+        BankManager(std::string name, CPF cpf, float salary, std::string password);
 
         // Regular Methods
         float bonus() const;  

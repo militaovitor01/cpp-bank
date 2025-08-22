@@ -14,7 +14,7 @@ using namespace std;
 
 int main()
 {   
-    Holder holder("Vitor", CPF("Vitor", "102.823.216-08", "24-04-2005"));
+    Holder holder("Vitor", CPF("Vitor", "102.823.216-08", "24-04-2005"), "senha1234");
     CurrentAccount currentAccount("1234", holder);
     currentAccount.setBalance(1.500);
 
@@ -25,7 +25,7 @@ int main()
 
     cout << "----------------------" << endl;
 
-    BankManager newEmployee("Vitor", CPF("Vitor","102.823.216-08", "24/04/05"), 20000);
+    BankManager newEmployee("Vitor", CPF("Vitor","102.823.216-08", "24/04/05"), 20000, "senha1234");
     cout << "Employee data: " << endl
     << "Employee name: " << newEmployee.getName() << endl 
     << "Employee Salary: " << newEmployee.getSalary() << endl;

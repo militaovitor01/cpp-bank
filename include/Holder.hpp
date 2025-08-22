@@ -1,14 +1,15 @@
 #pragma once
 #include <string>
 #include "CPF.hpp"
-#include "Person.hpp"  // Incluindo a classe base Person
+#include "Person.hpp"
+#include "Authenticable.hpp"
 
 // Boa prática: Não usar 'using namestpace std' em arquivos .hpp;
 
-class Holder : public Person {
+class Holder : public Person, Authenticable {
     public:
         // Constructor & Destructor
-        Holder(std::string name, CPF cpf);
+        Holder(std::string name, CPF cpf, std::string password);
         ~Holder();
 
         // Getters

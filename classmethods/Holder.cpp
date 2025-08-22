@@ -4,8 +4,8 @@
 #include <iostream>
 
 // Constructor
-Holder::Holder(std::string name, CPF cpf)
-    : Person(name, cpf) 
+Holder::Holder(std::string name, CPF cpf, std::string password)
+    : Person(name, cpf), Authenticable(password)
 {
     
 }
